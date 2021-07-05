@@ -7,6 +7,6 @@ for r, d, fs in os.walk(cdir):
         s=f.split('.')
         so=s[0][len(pref):]
         k=len(so)
-        if(k<2):
+        if(k<2 and s[1]!='py'):
             print(af)
             os.rename(af,cdir+'\\'+pref+'0'+so+'.'+s[1])
